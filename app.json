@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "rn-qrcode",
+    "slug": "rn-qrcode",
+    "version": "1.0.0",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.rnqrcode"
+    },
+    "ios": {
+        "bundleIdentifier": "com.anonymous.rnqrcode"
+    }
+  }
+}

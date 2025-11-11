@@ -62,13 +62,10 @@ export default function ContatoPage() {
 
       <div className="flex flex-col md:flex-row justify-center gap-6 text-gray-700 mt-6">
         <div className="flex items-center gap-2">
-          <Phone className="text-blue-800" /> (11) 98765-4321
+          <Phone className="text-blue-800" /> (41) 99938-5318
         </div>
         <div className="flex items-center gap-2">
           <Mail className="text-blue-800" /> info@exemplo.com
-        </div>
-        <div className="flex items-center gap-2">
-          <MapPin className="text-blue-800" /> Rua Exemplo, 123 - Cidade, Estado
         </div>
       </div>
     </section>

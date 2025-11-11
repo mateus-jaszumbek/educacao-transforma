@@ -7,15 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "tailwind:init": "node node_modules/@tailwindcss/cli/build/index.js init -p"
+    "tailwind:init": "node node_modules/@tailwindcss/cli/build/index.js init -p",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "dependencies": {
+    "expo": "^54.0.23",
+    "expo-camera": "~17.0.9",
     "lucide-react": "^0.546.0",
     "next": "16.0.0",
     "nodemailer": "^7.0.10",
+    "pix-utils": "^2.8.2",
     "qrcode.react": "^4.2.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-native": "0.81.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.16",
