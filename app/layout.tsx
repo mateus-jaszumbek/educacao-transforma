@@ -1,18 +1,49 @@
+'use client';
+
+import { useEffect } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, MessageCircle } from "lucide-react"; // ✅ Importa os ícones
+import { Instagram } from "lucide-react";
 import WhatsAppFloatingButton from "./components/WhatsApp-Flutuante";
 import "./globals.css";
 
-export const metadata = {
-  title: "Educação que Transforma",
-  description: "Explore seu potencial com aprendizado transformador.",
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // ✅ Versão simplificada - apenas remove os atributos uma vez
+    const removeProblematicAttributes = () => {
+      document.body.removeAttribute('cz-shortcut-listen');
+      document.body.removeAttribute('data-gramm');
+      document.body.removeAttribute('data-new-gr-c-s-check-loaded');
+    };
+
+    removeProblematicAttributes();
+
+    // ✅ Opcional: Se quiser observar mudanças futuras
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes') {
+          removeProblematicAttributes();
+        }
+      });
+    });
+
+    observer.observe(document.body, { 
+      attributes: true 
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <html lang="pt-BR">
-      <body className="bg-white text-gray-800">
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <title>Educação que Transforma</title>
+        <meta name="description" content="Explore seu potencial com aprendizado transformador." />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      
+      <body className="bg-white text-gray-800" suppressHydrationWarning>
         {/* HEADER */}
         <header className="flex flex-wrap justify-between items-center px-6 py-4 shadow-sm gap-4">
           <Link href="/" className="flex items-center">
@@ -50,8 +81,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 href="https://www.instagram.com/educacao_que_transforma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-pink-600 transition"                >
-                <Instagram className="w-[34px] h-[34px]" /> {/* mesmo tamanho da imagem */}
+                className="text-gray-700 hover:text-pink-600 transition"
+              >
+                <Instagram className="w-[34px] h-[34px]" />
               </a>
 
               <a
@@ -59,17 +91,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:scale-110"
-                >
+              >
                 <Image
                   src="/img/whatsapp.png"
                   alt="WhatsApp"
                   width={34}
                   height={34}
                   className="object-contain transition duration-300 hover:brightness-0 hover:invert-[49%] hover:sepia hover:saturate-[7483%] hover:hue-rotate-[94deg] hover:brightness-[95%] hover:contrast-[92%]"
-                  />
+                />
               </a>
             </div>
-
           </div>
         </footer>
       </body>
