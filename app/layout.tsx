@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <div className="relative z-10 flex flex-col items-center gap-2">     
             <div className="relative z-10 text-black">
-              © Educação que Transforma
+              © 2016 Educação que Transforma
             </div>
             <div className="flex gap-4 items-center justify-center">
               <a
