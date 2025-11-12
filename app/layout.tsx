@@ -43,10 +43,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta name="theme-color" content="#ffffff" />
-        <meta name="color-scheme" content="light" />
+        <meta name="color-scheme" content="light only" />
       </head>
       
-      <body className="bg-white text-gray-800" suppressHydrationWarning>
+      <body className="bg-white text-gray-800" style={{ colorScheme: "light" }} suppressHydrationWarning>
         {/* HEADER */}
         <header className="flex flex-wrap justify-between items-center px-6 py-4 shadow-sm gap-4">
           <Link href="/" className="flex items-center">
