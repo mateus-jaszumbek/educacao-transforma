@@ -65,7 +65,7 @@ export default function ContatoPage() {
           <Phone className="text-blue-800" /> (41) 99938-5318
         </div>
         <div className="flex items-center gap-2">
-          <Mail className="text-blue-800" /> info@exemplo.com
+          <Mail className="text-blue-800" /> jackson_mendes16@hotmail.com
         </div>
       </div>
     </section>
