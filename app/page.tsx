@@ -134,14 +134,45 @@ export default function Home() {
           </Kit>
         </div>
 
-        <div className="bg-blue-50 p-6 rounded-xl">
-          🎒 Todos os kits acompanham estojo e sacochila reutilizável.
-        </div>
+{/* Informações sobre estojo e mochila */}
+<div className="bg-blue-50 p-6 rounded-2xl shadow-sm text-center max-w-4xl mx-auto">
+  <p className="text-blue-800 font-semibold text-lg">
+    🎒 Todos os kits vão com estojo e sacochila de TNT preta ou lona reutilizável
+  </p>
+</div>
 
-        <p className="text-gray-700 max-w-4xl mx-auto">
-          Os materiais seguem padrão neutro, promovendo igualdade, inclusão e
-          respeito, evitando distinções e estereótipos de gênero.
-        </p>
+{/* Diretrizes e Igualdade */}
+<div className="max-w-4xl mx-auto space-y-6">
+
+  {/* Diretrizes de Uniformidade */}
+  <div className="bg-gray-50 p-6 rounded-2xl shadow-sm">
+    <h3 className="text-xl font-bold mb-3 flex items-center text-gray-800">
+      <span className="mr-2">🎯</span>
+      Diretrizes de Uniformidade
+    </h3>
+    <p className="text-gray-700 leading-relaxed">
+      Os materiais utilizados devem ter <strong>aparência neutra</strong>,
+      evitando o uso de itens com personagens, estampas chamativas ou cores muito
+      contrastantes. É importante que todos os materiais sigam o mesmo padrão
+      visual, mantendo <strong>igualdade e uniformidade</strong> entre eles.
+    </p>
+  </div>
+
+  {/* Promovendo a Igualdade */}
+  <div className="bg-green-50 p-6 rounded-2xl shadow-sm">
+    <h3 className="text-xl font-bold mb-3 flex items-center text-gray-800">
+      <span className="mr-2">⚖️</span>
+      Promovendo a Igualdade
+    </h3>
+    <p className="text-gray-700 leading-relaxed">
+      Buscamos promover o valor da <strong>igualdade entre os estudantes</strong>.
+      Por isso, é importante que todos utilizem materiais semelhantes, evitando
+      distinções que possam gerar comparações ou sentimentos de diferença.
+    </p>
+  </div>
+
+</div>
+
       </section>
 
       {/* ================= CTA ================= */}
