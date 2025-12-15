@@ -15,7 +15,7 @@
     "expo": "^54.0.23",
     "expo-camera": "~17.0.9",
     "lucide-react": "^0.546.0",
-    "next": "16.0.0",
+    "next": "16.0.10",
     "nodemailer": "^7.0.10",
     "pix-utils": "^2.8.2",
     "qrcode.react": "^4.2.0",
